@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #AE80F5;
+    color: #5A00F5;
+}
+.footer-image {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+}
+.footer-line {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 10%;
+    background-color: #AE80F5;
+}
+.card-games{
+    position: relative;
+    width: 25%;
+    height: 10%;
+    border-radius: 5px;
+    border: black solid;
+    margin: 2%;
+}
+.tudo.a{
+    text-decoration: none;
+}

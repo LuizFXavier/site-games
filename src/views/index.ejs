@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <title>Games</title>
+  </head>
+  <body class="tudo">
+    <header class="header">
+      <h1>Lol</h1>
+    </header>
+    <img class="footer-image" src="../public/image/city.png" alt="cic" />
     
-</body>
+    <section>
+        <% games.forEach(game => { %>
+         
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="row card-body">
+                            <img class="col-sm-7" src="..\public\image\memescraft.jpg" alt="sans"/>
+                           <div class="col-sm-4">
+                              <a href="/jogo_detalhes" class="card-title tudo"><%= game.nome %></a>
+                               <p class="card-text"><%= game.plataforma %></p>
+                               <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        <% }) %>
+            
+    </section>
+
+    <footer >
+        
+        
+        <div class="footer-line">
+            <h1>lol</h1>
+        </div>
+    </footer>
+    
+  </body>
 </html>
