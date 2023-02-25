@@ -6,7 +6,8 @@ class Endereco {
         DROP TABLE IF EXISTS Endereco CASCADE;
         CREATE TABLE IF NOT EXISTS Endereco
         (
-            CEP int PRIMARY KEY,
+            id serial primary key,
+            CEP varchar NOT NULL,
             estado varchar NOT NULL,
             cidade varchar NOT NULL, 
             bairro character varying NOT NULL,

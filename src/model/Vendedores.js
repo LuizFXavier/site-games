@@ -19,8 +19,8 @@ class Vendedor {
         )
         `).then(() => console.log("Dale"))
     }
-    async save(vendedor) { 
-        
+    async save(vendedor) {
+
         const hash = await bcrypt.hash(vendedor.senha, await bcrypt.genSalt(10));
         let id;
         await db.query(`
@@ -29,9 +29,21 @@ class Vendedor {
         ) VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING id;`,
             [vendedor.CPF, vendedor.nome_usuario, vendedor.nome_real, vendedor.email, vendedor.telefone, hash]
-        ).then((usuario)=>id = usuario.rows[0].id);
-        
+        ).then((usuario) => id = usuario.rows[0].id);
+
         return id;
+    }
+    async getById(id) {
+        try {
+
+            const vendedores = await db.query(`
+            SELECT * FROM Vendedor
+            WHERE id = ${id}
+            `);
+            return vendedores.rows[0];
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 export default Vendedor

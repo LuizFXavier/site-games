@@ -10,7 +10,13 @@
   </head>
   <body class="fundo">
     <header class="header" id="myHeader">
-      <a href="/register">Registro</a>
+      <% if (user) { %>
+        <a href="/perfil"><%= user.nome_usuario %></a>
+
+      <% }else{ %>
+          <a href="/register">Registro</a>
+
+      <% } %>
     </header>
     <!-- <img class="footer-image" src="../public/image/city.png" alt="cic" /> -->
 
