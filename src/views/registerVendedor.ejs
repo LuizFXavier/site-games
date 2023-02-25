@@ -1,0 +1,99 @@
+<form action="/save/vendedor" method="post" class="forms">
+  <h2>Informações pessoais</h2>
+  <div class="form-group">
+    <label>Nome real</label>
+    <input
+      name="nome_real"
+      required
+      type="text"
+      class="form-control"
+      placeholder="José Joaquim"
+    />
+  </div>
+  <div class="form-group">
+    <label>Nome de usuário</label>
+    <input name="nome_usuario" required type="text" class="form-control" placeholder="Jojo" />
+  </div>
+  <div class="form-group">
+    <label>CPF</label>
+    <input name="CPF" type="number" required class="form-control" />
+    <small class="form-text text-muted">Somente números</small>
+  </div>
+  <div class="form-group">
+    <label>Telefone</label>
+    <input name="telefone" required type="number" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Email address</label>
+    <input name="email" type="email" class="form-control" placeholder="Enter email" />
+    <small class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <div class="form-group">
+    <label  for="exampleInputPassword1">Senha</label>
+    <input name="senha" type="password" class="form-control" />
+  </div>
+  <h2>Endereço</h2>
+  <div class="form-group">
+    <label>CEP</label>
+    <input name="CEP" required type="text" class="form-control" />
+    <small class="form-text text-muted">Somente números</small>
+  </div>
+  <div class="form-group">
+    <label>Estado</label>
+    <select name="estado" required id="estado" class="form-select w-25" name="estado">
+      <option value="">Selecione</option>
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantins</option>
+      <option value="EX">Estrangeiro</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Cidade</label>
+    <input name="cidade" required type="text" class="form-control w-50" />
+  </div>
+  <div class="form-group">
+    <label>Bairro</label>
+    <input name="bairro" required type="text" class="form-control w-50" />
+  </div>
+  <div class="form-group">
+    <label>Rua</label>
+    <input name="rua" required type="text" class="form-control w-50" />
+  </div>
+  <div class="form-group w-25">
+    <label>Número</label>
+    <input name="numero" required type="number" class="form-control" />
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

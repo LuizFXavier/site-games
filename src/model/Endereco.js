@@ -1,7 +1,7 @@
 import db from "../database/connection.js"
 
-class Endereco{
-    async create(){
+class Endereco {
+    async create() {
         await db.query(`
         DROP TABLE IF EXISTS Endereco CASCADE;
         CREATE TABLE IF NOT EXISTS Endereco
@@ -17,7 +17,14 @@ class Endereco{
             constraint fk_usuario foreign key(id_usuario) references Usuario(id),
             constraint fk_vendedor foreign key(id_vendedor) references Vendedor(id)
         )
-        `).then(()=>console.log("Dale"))
+        `).then(() => console.log("Dale"))
+    }
+    async saveFromVendedor(endereco, id) {
+        await db.query(`
+        INSERT INTO Endereco(
+            CEP, estado, cidade, bairro, rua, numero, id_vendedor
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7);
+        `, [endereco.CEP, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, id])
     }
 }
 export default Endereco

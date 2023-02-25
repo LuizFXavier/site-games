@@ -4,6 +4,6 @@ export default new pg.Pool({
     user:"postgres",
     host:"localhost",
     database:"site_games",
-    password:"postgres",
+    password:"postgres", 
     port:5432
 })

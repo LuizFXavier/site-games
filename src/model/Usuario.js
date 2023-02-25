@@ -3,7 +3,7 @@ import db from "../database/connection.js"
 class Usuario{
     async create(){
         await db.query(`
-        DROP TABLE IF EXISTS Usuario CASCADE;
+        DROP TABLE IF EXISTS Usuario CASCADE; 
         CREATE TABLE IF NOT EXISTS Usuario
         (
             id serial PRIMARY KEY,

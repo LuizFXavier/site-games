@@ -1,40 +1,55 @@
 * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-  }
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 
-.header{
-    width: 100%;
-    height: 50px;
-    background-color: #AE80F5;
-    color: #5A00F5;
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #ae80f5;
+  color: #5a00f5;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.forms {
+  /* overflow: auto; */
+  position: relative;
+  margin-bottom: 6rem;
 }
 .footer-image {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    height: 40%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 40%;
 }
 .footer-line {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    height: 10%;
-    background-color: #AE80F5;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 13%;
+  background-color: #ae80f5;
+  top: auto;
 }
-.card-games{
-    position: relative;
-    width: 25%;
-    height: 10%;
-    border-radius: 5px;
-    border: black solid;
-    margin: 2%;
+.card-games {
+  position: relative;
+  width: 30%;
+  height: 10%;
+  border-radius: 5px;
+
+  margin: 2%;
 }
-.tudo.a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+.fundo {
+  background: url("/public/image/city.png") no-repeat;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
 }

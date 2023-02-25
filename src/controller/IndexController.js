@@ -4,7 +4,9 @@ class IndexController{
     async index(req, res){
         const jogos = new Games();
         const games = await jogos.list()
-        res.render("index", {games})
+             
+        console.log(req.cookies);
+        res.render("index", {games}) 
     }
 }
 
