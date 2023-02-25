@@ -5,28 +5,28 @@ import path, { resolve } from "path";
 import router from "./router.js";
 import cookieParser from "cookie-parser";
 import ejs from "express-ejs-layouts";
-import Vendedor from './model/Vendedores.js';
+import Vendedor from './model/Usuarios.js';
 
 const porteiro = process.env.PORT || 8080
 const app = express();
 app.use(cookieParser(process.env.SEGREDO_GIGATONICO))
-app.use(async (req,res,next)=>{
+app.use(async (req, res, next) => {
     let usuario;
-        let user;
-        
-        if(req.cookies['vendedor'] == "true"){
-            usuario = new Vendedor()
-        }
-        if(req.cookies['id_usuario']){
+    let user;
 
-            user = (await usuario.getById(Number(req.cookies['id_usuario'])));
-            
-            res.locals.user = user
-            next();
-        }else{
-            res.locals.user = false
-            next();
-        }
+    if (req.cookies['vendedor'] == "true") {
+        usuario = new Vendedor()
+    }
+    if (req.cookies['id_usuario']) {
+
+        user = (await usuario.getById(Number(req.cookies['id_usuario'])));
+
+        res.locals.user = user
+        next();
+    } else {
+        res.locals.user = false
+        next();
+    }
 })
 app.use(ejs)
 app.use(express.urlencoded({ extended: true }))

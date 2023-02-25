@@ -14,18 +14,16 @@ class Endereco {
             rua varchar NOT NULL,
             numero int NOT NULL,
             id_usuario int,
-            id_vendedor int,
-            constraint fk_usuario foreign key(id_usuario) references Usuario(id),
-            constraint fk_vendedor foreign key(id_vendedor) references Vendedor(id)
+            constraint fk_usuario foreign key(id_usuario) references Usuarios(id)
         )
         `).then(() => console.log("Dale"))
     }
-    async saveFromVendedor(endereco, id) {
+    async save(endereco, id) {
         await db.query(`
         INSERT INTO Endereco(
-            CEP, estado, cidade, bairro, rua, numero, id_vendedor
+            CEP, estado, cidade, bairro, rua, numero, id_usuario
         ) VALUES ($1, $2, $3, $4, $5, $6, $7);
         `, [endereco.CEP, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, id])
-    }
+    } 
 }
 export default Endereco
