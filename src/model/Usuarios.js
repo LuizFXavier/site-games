@@ -50,8 +50,9 @@ class Usuarios {
         try {
             const usuario = await db.query(`
             SELECT id, senha FROM Usuarios
-            WHERE email = ${email}
-            `);
+            WHERE email = $1
+            `,[email]);
+            return usuario.rows[0]; 
         } catch (error) {
             console.log(error);
         }

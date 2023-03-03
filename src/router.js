@@ -17,5 +17,7 @@ router.post("/save/vendedor", registerController.salvarVendedor)
 
 router.get("/perfil", perfilController.perfil)
 router.get("/perfil/logout", perfilController.logout)
+router.get("/login", perfilController.login)
+router.post("/logar", perfilController.logar)
 
 export default router

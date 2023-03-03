@@ -15,20 +15,27 @@
 
       <% }else{ %>
           <a href="/register">Registro</a>
-
+          <a href="/login">Login</a>
       <% } %>
     </header>
     <!-- <img class="footer-image" src="../public/image/city.png" alt="cic" /> -->
-
+    <% if (error) { %>
+      <div class="mt-5 alert alert-danger" role="alert">
+        <%= error %>
+      </div>
+    <% } %>
     <section class="container m-5"><%- body %></section>
 
     <footer class="footer-line d-flex p-2">
       
-      <div class="">
-        <a href="/jogo/adicionar" >
-          <img src="\public\image\mais.png" alt="">
-        </a>
-      </div>
+      <% if (user.vendedor) { %>
+       
+        <div class="">
+          <a href="/jogo/adicionar" >
+            <img src="\public\image\mais.png" alt="">
+          </a>
+        </div>
+      <% } %>
 
       <div class="mx-auto">
         <a href="/">
