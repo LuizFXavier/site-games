@@ -24,6 +24,6 @@ class Endereco {
             CEP, estado, cidade, bairro, rua, numero, id_usuario
         ) VALUES ($1, $2, $3, $4, $5, $6, $7);
         `, [endereco.CEP, endereco.estado, endereco.cidade, endereco.bairro, endereco.rua, endereco.numero, id])
-    } 
+    }
 }
 export default Endereco

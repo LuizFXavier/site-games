@@ -9,6 +9,7 @@ router.get("/", indexController.index)
 
 router.get("/jogo/detalhes", jogoController.jogo_detalhes)
 router.get("/jogo/adicionar", jogoController.jogo_adicionar)
+router.post("/jogo/salvar", jogoController.salvar)
 
 router.get("/register", registerController.register)
 router.get("/register/vendedor", registerController.registerVendedor)

@@ -18,9 +18,9 @@ class Games {
         )
         `).then(() => console.log("Dale"))
     }
-    async list(){
+    async list() {
         try {
-            
+
             const games = await db.query(`
             SELECT * FROM Games
             `);
@@ -28,6 +28,18 @@ class Games {
         } catch (error) {
             console.log(error);
         }
+    }
+    async save(game, quantidade, valor) {
+        let id
+        await db.query(`
+        INSERT INTO Games(
+            nome, descricao, marca, plataforma, genero, valor, quantidade
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+        RETURNING id;
+        `, [game.nome, game.descricao, game.marca, game.plataforma, game.genero, valor, quantidade]
+        ).then((usuario) => id = usuario.rows[0].id);
+
+        return id;
     }
 }
 export default Games

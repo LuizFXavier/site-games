@@ -1,3 +1,44 @@
-<form action="">
-    
+<form action="/jogo/salvar" method="post">
+  <div class="form-group">
+    <label>Título</label>
+    <input name="nome" required type="text" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label>Marca</label>
+    <input name="marca" required type="text" class="form-control" />
+  </div>
+  <label>Plataforma</label>
+  <select name="plataforma" class="form-select" required>
+    <option value="">Selecione</option>
+    <option value="ps3">PlayStation 3</option>
+    <option value="ps4">PlayStation 4</option>
+    <option value="ps5">PlayStation 5</option>
+    <option value="xbox-one">Xbox One</option>
+    <option value="xbox-series-s">Xbox Series S/X</option>
+    <option value="3DS">Nintendo 3DS</option>
+    <option value="switch">Nintendo Switch</option>
+    <option value="pc">PC</option>
+  </select>
+
+  <div class="form-group">
+    <label>Gênero</label>
+    <input name="genero" required type="text" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label>Descrição</label>
+    <textarea name="descricao" required type="text" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Valor</label>
+    <input name="valor" required type="number" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Quantidade</label>
+    <input name="quantidade" required type="number" class="form-control" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

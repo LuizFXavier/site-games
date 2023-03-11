@@ -57,5 +57,11 @@ class Usuarios {
             console.log(error);
         }
     }
+    async saveGame(idProprio, idGame){
+        db.query(`
+        UPDATE Usuarios SET game_id = ${idGame}
+        WHERE id = ${idProprio}
+        `)
+    }
 }
 export default Usuarios

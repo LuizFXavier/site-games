@@ -2,7 +2,7 @@
          
   <div class="card-games">
     <div class="row">
-      <img class="col-sm-7 rounded-5" src="data:image/jpeg;base64,<%= game.imagem.toString("base64") %>" alt="sans"/>
+      <img class="col-sm-7 rounded-5" src="<%= game.imagem ?"data:image/jpeg;base64,"+ game.imagem.toString("base64"):"/public/image/Default.png" %>" alt="sans"/>
       <div class="col-sm-4 h-100">
         <a href="/jogo/detalhes" class="nav-link fs-3"><%= game.nome %></a>
          <p class="text-secondary"><%= game.plataforma %></p>
